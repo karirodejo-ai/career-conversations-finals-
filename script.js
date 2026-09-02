@@ -16,6 +16,13 @@
       toggle.setAttribute("aria-expanded", "false");
     });
   });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && menu.classList.contains("open")) {
+      menu.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.focus();
+    }
+  });
 })();
 
 // ---------- Toasts ----------
@@ -134,6 +141,15 @@ document.querySelectorAll("form[data-form]").forEach(function (form) {
     form.reset();
   });
 });
+
+var dateInput = document.getElementById("date");
+if (dateInput) {
+  var today = new Date();
+  var localDate = today.getFullYear() + "-" +
+    String(today.getMonth() + 1).padStart(2, "0") + "-" +
+    String(today.getDate()).padStart(2, "0");
+  dateInput.min = localDate;
+}
 
 // ---------- Footer year ----------
 document.querySelectorAll("[data-year]").forEach(function (el) {
