@@ -48,7 +48,7 @@
     </a>
     <nav class="nav-desktop" aria-label="Main navigation">
       <a href="index.html">Home</a>
-<a href="about.html" class="active">About</a>
+<details class="nav-dropdown"><summary class="active">About</summary><div class="nav-dropdown-menu"><a href="about.html" class="active">About Dr. Faith</a><a href="about.html#credentials">Credentials &amp; Experience</a></div></details>
 <a href="services.html">Services</a>
 <a href="booking.html">Booking & Pricing</a>
 <a href="payment.html">Payment</a>
@@ -60,7 +60,7 @@
   <nav class="nav-mobile" aria-label="Mobile navigation">
     <ul>
       <li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
+<li><details><summary>About</summary><ul class="nav-mobile-submenu"><li><a href="about.html">About Dr. Faith</a></li><li><a href="about.html#credentials">Credentials &amp; Experience</a></li></ul></details></li>
 <li><a href="services.html">Services</a></li>
 <li><a href="booking.html">Booking & Pricing</a></li>
 <li><a href="payment.html">Payment</a></li>
@@ -96,6 +96,18 @@
         <a class="btn btn-lg btn-hero" href="booking.html">Schedule a Consultation</a>
         <a class="btn btn-lg btn-outline" href="services.html">See What We Can Talk About</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft" id="credentials">
+  <div class="container">
+    <p class="eyebrow">Credentials &amp; Experience</p>
+    <h2 style="margin-top:.75rem;font-size:2rem;color:var(--primary)">A practical foundation for your next career move</h2>
+    <div class="grid grid-3-md" style="margin-top:2.5rem">
+      <article class="card"><div class="card-body"><span class="icon-pill"><svg width="20" height="20" aria-hidden="true"><use href="#i-award"/></svg></span><h3>Career Mentor &amp; Coach</h3><p>Dr. Faith helps graduates, professionals, and career changers make confident, purposeful career decisions.</p></div></article>
+      <article class="card"><div class="card-body"><span class="icon-pill"><svg width="20" height="20" aria-hidden="true"><use href="#i-message"/></svg></span><h3>500+ Conversations</h3><p>Her experience spans more than 500 career conversations focused on clarity, positioning, transitions, and growth.</p></div></article>
+      <article class="card"><div class="card-body"><span class="icon-pill"><svg width="20" height="20" aria-hidden="true"><use href="#i-target"/></svg></span><h3>Six Focus Areas</h3><p>Clients receive practical guidance across entry-level positioning, unconventional paths, branding, and career strategy.</p></div></article>
     </div>
   </div>
 </section>
