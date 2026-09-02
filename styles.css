@@ -439,10 +439,9 @@ textarea { min-height: 8rem; resize: vertical; }
 }
 .portrait { 
   width: 100%; 
-  aspect-ratio: 6 / 7; 
+  height: auto; 
   border-radius: 1.25rem; 
-  object-fit: cover; 
-  object-position: top center; 
+  object-fit: contain; 
   box-shadow: 0 20px 50px -15px rgba(72, 109, 200, 0.3);
   transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
 }
