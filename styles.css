@@ -583,12 +583,21 @@ textarea { min-height: 8rem; resize: vertical; }
 @media (max-width: 639px) {
   .section { padding-block: 3.25rem; }
   .card-body { padding: 1.25rem; }
-  .hero .content { padding-block: 4.75rem; }
+  .hero .content { padding-block: 3.5rem; }
+  .hero img { max-width: none; object-fit: cover; object-position: 85% center; }
+  .hero h1 { font-size: clamp(2rem, 9vw, 2.25rem); }
+  .hero p { font-size: 0.95rem; }
+  .hero-actions { margin-top: 1.75rem; }
   .hero-actions .btn { width: 100%; }
   .slider-controls { gap: 0.6rem; }
   .slider-controls .btn { padding-inline: 0.75rem; }
   #toast-root { right: 0.75rem; left: 0.75rem; }
   .toast { max-width: none; }
+}
+
+@media (max-width: 639px) {
+  .hero-copy, .container, .container-narrow, .container-mid { min-width: 0; }
+  .hero p, .card p, .site-footer a, .site-footer span { overflow-wrap: anywhere; }
 }
 
 @media (prefers-reduced-motion: reduce) {
