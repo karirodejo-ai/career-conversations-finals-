@@ -485,6 +485,8 @@ textarea { min-height: 8rem; resize: vertical; }
   background: color-mix(in oklab, var(--accent) 10%, transparent);
   transform: translateY(-4px) scale(1.1);
 }
+.socials a.social-muted { opacity: 0.4; cursor: not-allowed; filter: grayscale(1); pointer-events: none; }
+.socials a.social-muted:hover { border-color: color-mix(in oklab, var(--primary-foreground) 30%, transparent); color: color-mix(in oklab, var(--primary-foreground) 75%, transparent); background: color-mix(in oklab, var(--primary-foreground) 5%, transparent); transform: none; }
 .footer-bottom { 
   border-top: 1px solid color-mix(in oklab, var(--primary-foreground) 15%, transparent);
   position: relative;
