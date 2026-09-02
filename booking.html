@@ -17,7 +17,7 @@
 
 </head>
 <body>
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
 <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
 <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
@@ -65,7 +65,7 @@
 <li><a href="booking.html">Booking & Pricing</a></li>
 <li><a href="payment.html">Payment</a></li>
 <li><a href="contact.html">Contact</a></li>
-      <li style="padding-top:.5rem"><a class="btn btn-hero btn-full" href="booking.html">Book a Session</a></li>
+      <li class="mobile-cta"><a class="btn btn-hero btn-full" href="booking.html">Book a Session</a></li>
     </ul>
   </nav>
 </header>
@@ -73,44 +73,44 @@
 
 <section class="section on-primary">
   <div class="container">
-    <h1 style="font-size:clamp(2.25rem,4vw,3rem)">Book Your Career Conversation</h1>
+    <h1 class="page-title">Book Your Career Conversation</h1>
     <p class="lede">Pick the session length that matches your goal, then request a date and time that works for you.</p>
   </div>
 </section>
 
-<section class="section" id="pricing" style="scroll-margin-top:5rem">
+<section class="section anchored-section" id="pricing">
   <div class="container">
-    <h2 style="font-size:1.75rem;color:var(--primary)">Session options</h2>
-    <div style="margin-top:2rem"><div class="grid grid-3-md">
+    <h2 class="section-title">Session options</h2>
+    <div class="pricing-grid"><div class="grid grid-3-md">
     <article class="card" data-session="45"><div class="card-body">
       <p class="tagline">Focused guidance</p>
-      <h3 style="font-size:1.125rem">45-Minute Session</h3>
+      <h3 class="session-title">45-Minute Session</h3>
       <p class="price">$60</p>
       <ul class="check-list"><li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>Quick career guidance</li><li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>Resume feedback</li><li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>Job search strategy</li></ul>
-      <div style="margin-top:1.75rem"><button type="button" data-select class="btn btn-full btn-outline">Select this session</button></div>
+      <div class="session-action"><button type="button" data-select class="btn btn-full btn-outline">Select this session</button></div>
     </div></article>
     <article class="card" data-session="60"><div class="card-body">
       <p class="tagline">Most popular</p>
-      <h3 style="font-size:1.125rem">60-Minute Session</h3>
+      <h3 class="session-title">60-Minute Session</h3>
       <p class="price">$80</p>
       <ul class="check-list"><li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>Career planning</li><li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>Professional development discussions</li><li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>Interview preparation</li></ul>
-      <div style="margin-top:1.75rem"><button type="button" data-select class="btn btn-full btn-outline">Select this session</button></div>
+      <div class="session-action"><button type="button" data-select class="btn btn-full btn-outline">Select this session</button></div>
     </div></article>
     <article class="card" data-session="90"><div class="card-body">
       <p class="tagline">Deep dive</p>
-      <h3 style="font-size:1.125rem">90-Minute Session</h3>
+      <h3 class="session-title">90-Minute Session</h3>
       <p class="price">$120</p>
       <ul class="check-list"><li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>Deep-dive career strategy</li><li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>Career transition planning</li><li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg>Comprehensive coaching sessions</li></ul>
-      <div style="margin-top:1.75rem"><button type="button" data-select class="btn btn-full btn-outline">Select this session</button></div>
+      <div class="session-action"><button type="button" data-select class="btn btn-full btn-outline">Select this session</button></div>
     </div></article></div></div>
   </div>
 </section>
 
 <section class="section soft">
   <div class="container-narrow">
-    <h2 id="booking-form" style="font-size:1.75rem;color:var(--primary);scroll-margin-top:5rem">Request your appointment</h2>
-    <p class="muted" style="margin-top:.75rem">Share a few details and Dr. Faith will confirm your session by email.</p>
-    <div class="card" style="margin-top:2rem"><div class="card-body">
+    <h2 id="booking-form" class="section-title anchored-heading">Request your appointment</h2>
+    <p class="muted intro-copy">Share a few details and Dr. Faith will confirm your session by email.</p>
+    <div class="card form-card"><div class="card-body">
       <form data-form="booking" class="form-grid form-grid-2">
         <div class="span-2"><label for="fullName">Full Name</label><input id="fullName" name="Full name" required autocomplete="name"></div>
         <div><label for="email">Email Address</label><input id="email" name="Email" type="email" required autocomplete="email"></div>
@@ -141,7 +141,7 @@
   <div class="container footer-grid">
     <div>
       <h2>Career Conversations w/Dr. Faith</h2>
-      <p style="margin-top:.75rem;max-width:22rem">Personalized career coaching for graduates, professionals, and career changers ready to take a confident next step.</p>
+      <p class="footer-intro">Personalized career coaching for graduates, professionals, and career changers ready to take a confident next step.</p>
       <div class="socials">
         <a class="social-muted" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile currently unavailable" aria-disabled="true" tabindex="-1"><svg width="20" height="20" aria-hidden="true"><use href="#i-facebook"/></svg></a>
         <a class="social-muted" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok profile currently unavailable" aria-disabled="true" tabindex="-1"><svg width="20" height="20" aria-hidden="true"><use href="#i-tiktok"/></svg></a>
@@ -161,8 +161,8 @@
     <div>
       <h3>Payments &amp; Contact</h3>
       <ul>
-        <li style="display:flex;gap:.5rem;align-items:center"><svg width="18" height="18" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:muriithifaith6@gmail.com">muriithifaith6@gmail.com</a></li>
-        <li style="display:flex;gap:.5rem;align-items:center"><svg width="18" height="18" aria-hidden="true"><use href="#i-phone"/></svg><span>Cash App: $FaithMuriithi</span></li>
+        <li class="footer-contact-item"><svg width="18" height="18" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:muriithifaith6@gmail.com">muriithifaith6@gmail.com</a></li>
+        <li class="footer-contact-item"><svg width="18" height="18" aria-hidden="true"><use href="#i-phone"/></svg><span>Cash App: $FaithMuriithi</span></li>
       </ul>
     </div>
   </div>

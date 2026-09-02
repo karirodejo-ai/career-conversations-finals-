@@ -17,7 +17,7 @@
 
 </head>
 <body>
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
 <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
 <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
@@ -65,7 +65,7 @@
 <li><a href="booking.html">Booking & Pricing</a></li>
 <li><a href="payment.html">Payment</a></li>
 <li><a href="contact.html">Contact</a></li>
-      <li style="padding-top:.5rem"><a class="btn btn-hero btn-full" href="booking.html">Book a Session</a></li>
+      <li class="mobile-cta"><a class="btn btn-hero btn-full" href="booking.html">Book a Session</a></li>
     </ul>
   </nav>
 </header>
@@ -73,7 +73,7 @@
 
 <section class="section on-primary">
   <div class="container">
-    <h1 style="font-size:clamp(2.25rem,4vw,3rem)">Payment Information</h1>
+    <h1 class="page-title">Payment Information</h1>
     <p class="lede">Sessions are confirmed once payment is received. Choose the method that works best for you.</p>
   </div>
 </section>
@@ -95,9 +95,9 @@
       </div></article>
     </div>
 
-    <div class="card" style="margin-top:2rem"><div class="card-body">
-      <h2 style="font-size:1.125rem;color:var(--primary)">How payment works</h2>
-      <ol class="muted" style="margin-top:1rem;display:grid;gap:.5rem;font-size:.9rem;padding-left:1.1rem">
+    <div class="card form-card"><div class="card-body">
+      <h2 class="compact-heading">How payment works</h2>
+      <ol class="muted payment-steps">
         <li>Book your session using the booking form and wait for the confirmation email.</li>
         <li>Send the exact session amount ($60, $80, or $120) via Zelle or Cash App.</li>
         <li>Include your full name and session date in the payment note.</li>
@@ -106,10 +106,10 @@
       </ol>
     </div></div>
 
-    <div class="card" style="margin-top:2rem"><div class="card-body">
-      <h2 style="font-size:1.125rem;color:var(--primary);display:flex;align-items:center;gap:.5rem"><svg width="20" height="20" aria-hidden="true"><use href="#i-card"/></svg> Card billing details</h2>
-      <p class="muted" style="margin-top:.5rem;font-size:.875rem">Prefer paying by card? Submit your billing details and you will receive a secure invoice to complete the payment.</p>
-      <form data-form="card" class="form-grid form-grid-2" style="margin-top:1.5rem">
+    <div class="card form-card"><div class="card-body">
+      <h2 class="compact-heading icon-heading"><svg width="20" height="20" aria-hidden="true"><use href="#i-card"/></svg> Card billing details</h2>
+      <p class="muted small-copy">Prefer paying by card? Submit your billing details and you will receive a secure invoice to complete the payment.</p>
+      <form data-form="card" class="form-grid form-grid-2 form-top-margin">
         <div class="span-2"><label for="cardName">Name on Card</label><input id="cardName" name="Name on card" required autocomplete="cc-name"></div>
         <div class="span-2"><label for="cardEmail">Billing Email</label><input id="cardEmail" name="Billing email" type="email" required autocomplete="email"></div>
         <div class="span-2"><label for="billingAddress">Billing Address</label><input id="billingAddress" name="Billing address" required autocomplete="street-address"></div>
@@ -127,10 +127,10 @@
       </form>
     </div></div>
 
-    <div class="card" style="margin-top:2rem"><div class="card-body">
-      <h2 style="font-size:1.125rem;color:var(--primary)">Email payment confirmation</h2>
-      <p class="muted" style="margin-top:.5rem;font-size:.875rem">Your email app will open with the details. Attach your screenshot before sending.</p>
-      <form data-form="payment" class="form-grid form-grid-2" style="margin-top:1.5rem">
+    <div class="card form-card"><div class="card-body">
+      <h2 class="compact-heading">Email payment confirmation</h2>
+      <p class="muted small-copy">Your email app will open with the details. Attach your screenshot before sending.</p>
+      <form data-form="payment" class="form-grid form-grid-2 form-top-margin">
         <div><label for="payName">Full Name</label><input id="payName" name="Full name" required autocomplete="name"></div>
         <div><label for="payEmail">Email Address</label><input id="payEmail" name="Email" type="email" required autocomplete="email"></div>
         <div class="span-2"><label for="receipt">Payment Confirmation Screenshot</label><input id="receipt" name="Receipt file" type="file" accept="image/*,application/pdf" required><p class="hint">The file name will be included in the email; attach the actual file after your email app opens.</p></div>
@@ -145,7 +145,7 @@
   <div class="container footer-grid">
     <div>
       <h2>Career Conversations w/Dr. Faith</h2>
-      <p style="margin-top:.75rem;max-width:22rem">Personalized career coaching for graduates, professionals, and career changers ready to take a confident next step.</p>
+      <p class="footer-intro">Personalized career coaching for graduates, professionals, and career changers ready to take a confident next step.</p>
       <div class="socials">
         <a class="social-muted" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile currently unavailable" aria-disabled="true" tabindex="-1"><svg width="20" height="20" aria-hidden="true"><use href="#i-facebook"/></svg></a>
         <a class="social-muted" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok profile currently unavailable" aria-disabled="true" tabindex="-1"><svg width="20" height="20" aria-hidden="true"><use href="#i-tiktok"/></svg></a>
@@ -165,8 +165,8 @@
     <div>
       <h3>Payments &amp; Contact</h3>
       <ul>
-        <li style="display:flex;gap:.5rem;align-items:center"><svg width="18" height="18" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:muriithifaith6@gmail.com">muriithifaith6@gmail.com</a></li>
-        <li style="display:flex;gap:.5rem;align-items:center"><svg width="18" height="18" aria-hidden="true"><use href="#i-phone"/></svg><span>Cash App: $FaithMuriithi</span></li>
+        <li class="footer-contact-item"><svg width="18" height="18" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:muriithifaith6@gmail.com">muriithifaith6@gmail.com</a></li>
+        <li class="footer-contact-item"><svg width="18" height="18" aria-hidden="true"><use href="#i-phone"/></svg><span>Cash App: $FaithMuriithi</span></li>
       </ul>
     </div>
   </div>
