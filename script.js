@@ -127,6 +127,7 @@ document.querySelectorAll("form[data-form]").forEach(function (form) {
       kind === "booking" ? "New session booking request" :
       kind === "card" ? "Card invoice request" :
       kind === "payment" ? "Payment confirmation" :
+      kind === "rating" ? "New service rating" :
       "Website enquiry";
     mailtoSubmit(subject, form);
     if (kind === "booking") {
@@ -135,12 +136,26 @@ document.querySelectorAll("form[data-form]").forEach(function (form) {
       toast("Invoice request ready to send", "Send the opened email and you'll receive a secure invoice.");
     } else if (kind === "payment") {
       toast("Almost done", "Attach your payment screenshot to the opened email and send it.");
+    } else if (kind === "rating") {
+      toast("Rating ready to send", "Your email app opened with your feedback. Send it to share your experience.");
     } else {
       toast("Message ready to send", "Send the opened email and you'll hear back soon.");
     }
     form.reset();
   });
 });
+
+// ---------- Service rating ----------
+(function rating() {
+  var form = document.querySelector('form[data-form="rating"]');
+  if (!form) return;
+  var value = form.querySelector("[data-rating-value]");
+  form.querySelectorAll('input[name="rating"]').forEach(function (input) {
+    input.addEventListener("change", function () {
+      value.textContent = input.value + (input.value === "1" ? " star" : " stars") + " selected";
+    });
+  });
+})();
 
 var dateInput = document.getElementById("date");
 if (dateInput) {

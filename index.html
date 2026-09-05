@@ -185,6 +185,60 @@
   </div>
 </section>
 
+<section class="section rating-section">
+  <div class="container-narrow">
+    <div class="center">
+      <p class="eyebrow">Your Experience Matters</p>
+      <h2 class="section-heading">How would you rate your session?</h2>
+      <p class="muted intro-copy-lg">Share a quick rating for the service you received. Your feedback helps make every career conversation better.</p>
+    </div>
+    <form class="card rating-card" data-form="rating">
+      <div class="card-body">
+        <fieldset class="rating-fieldset">
+          <legend>Choose a rating</legend>
+          <div class="star-rating" role="radiogroup" aria-label="Rate your service from 1 to 5 stars">
+            <input type="radio" id="rating-5" name="rating" value="5" required>
+            <label for="rating-5" title="5 stars">&#9733;<span class="sr-only">5 stars</span></label>
+            <input type="radio" id="rating-4" name="rating" value="4">
+            <label for="rating-4" title="4 stars">&#9733;<span class="sr-only">4 stars</span></label>
+            <input type="radio" id="rating-3" name="rating" value="3">
+            <label for="rating-3" title="3 stars">&#9733;<span class="sr-only">3 stars</span></label>
+            <input type="radio" id="rating-2" name="rating" value="2">
+            <label for="rating-2" title="2 stars">&#9733;<span class="sr-only">2 stars</span></label>
+            <input type="radio" id="rating-1" name="rating" value="1">
+            <label for="rating-1" title="1 star">&#9733;<span class="sr-only">1 star</span></label>
+          </div>
+          <p class="rating-value" data-rating-value aria-live="polite">Select a star rating</p>
+        </fieldset>
+        <div class="form-grid form-grid-2 rating-details">
+          <div>
+            <label for="rating-service">Service received</label>
+            <select id="rating-service" name="service" required>
+              <option value="">Choose a service</option>
+              <option>Career clarity conversation</option>
+              <option>Career growth strategy</option>
+              <option>Career shift or transition</option>
+              <option>Resume and professional branding</option>
+              <option>Interview preparation</option>
+              <option>Other coaching service</option>
+            </select>
+          </div>
+          <div>
+            <label for="rating-name">Your name <span class="muted">(optional)</span></label>
+            <input id="rating-name" name="name" type="text" autocomplete="name" placeholder="Your name">
+          </div>
+          <div class="span-2">
+            <label for="rating-comment">Tell us more <span class="muted">(optional)</span></label>
+            <textarea id="rating-comment" name="comment" rows="4" placeholder="What stood out about your session?"></textarea>
+          </div>
+        </div>
+        <button class="btn btn-hero btn-full rating-submit" type="submit">Submit your rating <svg width="18" height="18" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <p class="hint center">Submitting opens your email app with the rating details ready to send.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
 <section class="section on-primary">
   <div class="container-narrow center">
     <h2 class="cta-heading">Ready to invest in your career journey?</h2>
