@@ -103,7 +103,7 @@ function toast(title, description, isError) {
   with the details pre-filled so nothing is lost. To post to a real backend
   instead, replace mailtoSubmit() with a fetch() to your own endpoint.
 */
-var CONTACT_EMAIL = "muriithifaith6@gmail.com";
+var CONTACT_EMAIL = "Careerswfaith@gmail.com";
 
 function mailtoSubmit(subject, form, skipFields) {
   var lines = [];
