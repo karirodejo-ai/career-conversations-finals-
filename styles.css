@@ -113,6 +113,18 @@ a { color: inherit; transition: color var(--transition-smooth); }
 .rating-value { margin-top: .75rem; min-height: 1.5rem; color: var(--muted-foreground); font-size: .875rem; }
 .rating-details { margin-top: 1.75rem; }
 .rating-submit { margin-top: 1.75rem; }
+.resource-feature, .resource-visibility { align-items: center; }
+.resource-download { margin-top: 1.75rem; }
+.resource-capture { border-top: 4px solid var(--accent); }
+.resource-icon { display: inline-flex; color: var(--primary); }
+.resource-capture h3 { margin-top: .75rem; font-size: 1.25rem; }
+.resource-capture form { margin-top: 1.5rem; display: grid; gap: 1rem; }
+.resource-capture form label { margin: 0; }
+.resource-capture form input { margin-top: -.5rem; }
+.social-content-grid { margin-top: 2.5rem; }
+.social-post { height: 100%; }
+.social-post .social-caption { min-height: 6rem; color: var(--foreground); }
+.social-post button { margin-top: 1rem; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .site-header {
   position: sticky; top: 0; z-index: 50;

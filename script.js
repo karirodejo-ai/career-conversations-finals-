@@ -128,6 +128,7 @@ document.querySelectorAll("form[data-form]").forEach(function (form) {
       kind === "card" ? "Card invoice request" :
       kind === "payment" ? "Payment confirmation" :
       kind === "rating" ? "New service rating" :
+      kind === "lead" ? "Career Clarity Worksheet request" :
       "Website enquiry";
     mailtoSubmit(subject, form);
     if (kind === "booking") {
@@ -138,6 +139,8 @@ document.querySelectorAll("form[data-form]").forEach(function (form) {
       toast("Almost done", "Attach your payment screenshot to the opened email and send it.");
     } else if (kind === "rating") {
       toast("Rating ready to send", "Your email app opened with your feedback. Send it to share your experience.");
+    } else if (kind === "lead") {
+      toast("Worksheet request ready to send", "Send the opened email and use the worksheet right away from the resources page.");
     } else {
       toast("Message ready to send", "Send the opened email and you'll hear back soon.");
     }
@@ -156,6 +159,30 @@ document.querySelectorAll("form[data-form]").forEach(function (form) {
     });
   });
 })();
+
+// ---------- Copy-ready social posts ----------
+document.querySelectorAll("[data-copy]").forEach(function (button) {
+  button.addEventListener("click", function () {
+    var text = button.getAttribute("data-copy");
+    function copied() {
+      button.textContent = "Copied";
+      setTimeout(function () { button.textContent = "Copy post"; }, 1800);
+    }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(copied);
+    } else {
+      var area = document.createElement("textarea");
+      area.value = text;
+      area.style.position = "fixed";
+      area.style.opacity = "0";
+      document.body.appendChild(area);
+      area.select();
+      document.execCommand("copy");
+      area.remove();
+      copied();
+    }
+  });
+});
 
 var dateInput = document.getElementById("date");
 if (dateInput) {
