@@ -102,6 +102,10 @@ a { color: inherit; transition: color var(--transition-smooth); }
 .cta-actions { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
 .rating-section { background: linear-gradient(135deg, var(--surface-soft), var(--background)); }
 .rating-card { margin: 2rem auto 0; max-width: 42rem; }
+.google-review-card { border: 2px solid var(--accent); }
+.google-review-card h3 { margin-bottom: .5rem; }
+.rating-secondary-heading { margin-top: 3rem; }
+.rating-secondary-heading h3 { margin-bottom: .35rem; }
 .rating-fieldset { border: 0; padding: 0; margin: 0; text-align: center; }
 .rating-fieldset legend { width: 100%; font-size: .875rem; font-weight: 600; color: var(--foreground); }
 .star-rating { display: inline-flex; flex-direction: row-reverse; justify-content: center; gap: .2rem; margin-top: .75rem; }
