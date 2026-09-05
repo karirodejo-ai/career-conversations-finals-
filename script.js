@@ -98,25 +98,22 @@ function toast(title, description, isError) {
 })();
 
 // ---------- Forms ----------
-/*
-  This static build has no backend. Each form opens the visitor's email client
-  with the details pre-filled so nothing is lost. To post to a real backend
-  instead, replace mailtoSubmit() with a fetch() to your own endpoint.
-*/
 var CONTACT_EMAIL = "Careerswfaith@gmail.com";
+var FORM_ENDPOINT = "https://formsubmit.co/ajax/" + CONTACT_EMAIL;
 
-function mailtoSubmit(subject, form, skipFields) {
-  var lines = [];
-  new FormData(form).forEach(function (value, key) {
-    if (skipFields && skipFields.indexOf(key) !== -1) return;
-    if (value instanceof File) { if (value.name) lines.push(key + ": " + value.name); return; }
-    if (String(value).trim()) lines.push(key + ": " + value);
+function sendForm(subject, form) {
+  var data = new FormData(form);
+  data.append("_subject", subject);
+  data.append("_captcha", "false");
+  data.append("_template", "table");
+  return fetch(FORM_ENDPOINT, {
+    method: "POST",
+    body: data,
+    headers: { Accept: "application/json" }
+  }).then(function (response) {
+    if (!response.ok) throw new Error("Form submission failed");
+    return response.json();
   });
-  var href =
-    "mailto:" + CONTACT_EMAIL +
-    "?subject=" + encodeURIComponent(subject) +
-    "&body=" + encodeURIComponent(lines.join("\n"));
-  window.location.href = href;
 }
 
 document.querySelectorAll("form[data-form]").forEach(function (form) {
@@ -130,21 +127,24 @@ document.querySelectorAll("form[data-form]").forEach(function (form) {
       kind === "rating" ? "New service rating" :
       kind === "lead" ? "Career Clarity Worksheet request" :
       "Website enquiry";
-    mailtoSubmit(subject, form);
-    if (kind === "booking") {
-      toast("Appointment request ready to send", "Your email app opened with the session details — hit send and Dr. Faith will confirm within 24 hours.");
-    } else if (kind === "card") {
-      toast("Invoice request ready to send", "Send the opened email and you'll receive a secure invoice.");
-    } else if (kind === "payment") {
-      toast("Almost done", "Attach your payment screenshot to the opened email and send it.");
-    } else if (kind === "rating") {
-      toast("Rating ready to send", "Your email app opened with your feedback. Send it to share your experience.");
-    } else if (kind === "lead") {
-      toast("Worksheet request ready to send", "Send the opened email and use the worksheet right away from the resources page.");
-    } else {
-      toast("Message ready to send", "Send the opened email and you'll hear back soon.");
-    }
-    form.reset();
+    sendForm(subject, form).then(function () {
+      if (kind === "booking") {
+      toast("Appointment request sent", "Dr. Faith will confirm your session by email within 24 hours.");
+      } else if (kind === "card") {
+      toast("Invoice request sent", "You'll receive a secure invoice by email.");
+      } else if (kind === "payment") {
+      toast("Payment confirmation sent", "Your payment confirmation was sent successfully.");
+      } else if (kind === "rating") {
+      toast("Rating sent", "Thank you for sharing your experience.");
+      } else if (kind === "lead") {
+      toast("Worksheet request sent", "Your worksheet request was sent successfully.");
+      } else {
+      toast("Message sent", "You'll hear back soon.");
+      }
+      form.reset();
+    }).catch(function () {
+      toast("Message could not be sent", "Please try again or email Careerswfaith@gmail.com directly.", true);
+    });
   });
 });
 
