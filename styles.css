@@ -113,6 +113,10 @@ a { color: inherit; transition: color var(--transition-smooth); }
 .rating-value { margin-top: .75rem; min-height: 1.5rem; color: var(--muted-foreground); font-size: .875rem; }
 .rating-details { margin-top: 1.75rem; }
 .rating-submit { margin-top: 1.75rem; }
+.referral-field { padding: 1rem; border: 1px solid var(--accent); border-radius: var(--radius); background: color-mix(in srgb, var(--accent) 10%, var(--background)); }
+.referral-field .eyebrow { margin-bottom: .35rem; }
+.referral-field label { margin-bottom: 0; }
+.required-note { color: var(--error); font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .resource-feature, .resource-visibility { align-items: center; }
 .resource-download { margin-top: 1.75rem; }
 .resource-capture { border-top: 4px solid var(--accent); }
